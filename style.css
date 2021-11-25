@@ -1,0 +1,60 @@
+* {
+    margin:0;
+}
+
+.layout {
+    display:grid;
+    height: 100vh;
+    grid-template:                   /* Heights */
+     "header" 1fr   /* First row */
+     "about-me"  0.6fr    /* Second row */
+     "portfolio"  0.6fr    /* Second row */
+     "experience"  0.6fr    /* Second row */
+     "footer" 0.1fr / /* Third row */
+     1fr;
+}
+
+.box {
+    min-width: 40px;
+    min-height: 40px;
+    padding: 4px;
+    border: 5px red;
+  }
+
+.h1 {
+    font-size: larger;
+}
+
+.header {
+    grid-area: header;
+    background-color: #4eb6ac;
+    border: 5px black;
+}
+
+.about-me {
+    grid-area: about-me;
+    background-color: white;
+    border: 5px black;
+}
+
+.portfolio {
+    grid-area: portfolio;
+    background-color: pink;
+    display:grid
+}
+
+.three-column-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+}
+
+.experience {
+    grid-area: experience;
+    background-color: white;
+}
+
+.footer {
+    grid-area: footer;
+    background-color: darkslategray;
+}
