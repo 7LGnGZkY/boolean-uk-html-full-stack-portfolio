@@ -1,14 +1,21 @@
 * {
     margin:0;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+
 }
 
 .layout {
     display:grid;
     height: 100vh;
+   
     grid-template:                   /* Heights */
      "header" 1fr   /* First row */
+     /* "divider-one" 30px */
      "about-me"  0.6fr    /* Second row */
+     /* "divider-two" 30px */
      "portfolio"  0.6fr    /* Second row */
+     /* "divider-three" 30px */
      "experience"  0.6fr    /* Second row */
      "footer" 0.1fr / /* Third row */
      1fr;
@@ -18,40 +25,72 @@
     min-width: 40px;
     min-height: 40px;
     padding: 4px;
-    border: 5px red;
+    border: 3px solid green;
   }
 
-.h1 {
+h1 {
+    
+    color: white;
     font-size: larger;
+       
+}
+
+h2 {
+    color: white;
+    font-size: medium;
+}
+
+/* .divider-one, .divider-two, .divider-three {
+    background-color: black;
+   } */
+
+line.div {
+    height:10px;
+    background-color: black;
 }
 
 .header {
     grid-area: header;
     background-color: #4eb6ac;
-    border: 5px black;
+    display:grid;
+    padding: 0.5em;
+
+    text-align: center;
+    /* border: 5px black;
+    border: 3px solid; */
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+       
+    
 }
 
 .about-me {
     grid-area: about-me;
     background-color: white;
-    border: 5px black;
+    /* border: 5px black; */
+    text-align: center;
+    border-top: 3px solid black;
 }
 
 .portfolio {
     grid-area: portfolio;
     background-color: pink;
-    display:grid
+    display:grid;
+    border-top: 3px solid black;
 }
 
 .three-column-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 5px;
+    grid-template-rows: minmax(350px, auto);
+    padding: 1em;
 }
 
 .experience {
     grid-area: experience;
     background-color: white;
+    border-top: 3px solid black;
 }
 
 .footer {
